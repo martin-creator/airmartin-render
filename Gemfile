@@ -59,5 +59,7 @@ gem 'thread_safe', '0.3.6'
 
 gem 'devise', '~>4.2'
 
+gem 'toastr-rails', '~>1.0'
+
 
 

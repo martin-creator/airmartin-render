@@ -5,10 +5,9 @@
 <br />
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
+  <%= render 'shared/devisemes' %>
   <div class="form-group">
-    <%= f.text_field :fullname, autofocus: true, autocomplete: "Full Name" ,  placeholder: "Email", class: "form-control" %>
+    <%= f.text_field :fullname, autofocus: true, autocomplete: "Full Name" ,  placeholder: "Full Name", class: "form-control" %>
   </div>
 
   <div class="form-group">
