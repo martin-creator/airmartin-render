@@ -55,16 +55,19 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost:3000'}
 
   config.action_mailer.delivery_method = :smtp
-
+  
   config.action_mailer.smtp_settings = {
-      address: 'smtp.primetel.tech',
-      enable_starttls_auto: true,
-      port: 587,
-      domain: 'primetel.tech',
-      user_name: 'demo@primetel.tech',
-      password: "******",
-      authentication: 'login',
-      
-    }
+    address: 'smtp.primetel.tech',
+    enable_starttls_auto: true,
+    port: 587,
+    domain: 'primetel.tech',
+    user_name: 'demo@primetel.tech',
+    password: "*",
+    authentication: 'login',
+    
+  }
+
+
+  
 
 end
