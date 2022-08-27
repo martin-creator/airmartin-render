@@ -62,7 +62,7 @@ Rails.application.configure do
       port: 587,
       domain: 'primetel.tech',
       user_name: 'demo@primetel.tech',
-      password: "martin@2022",
+      password: "******",
       authentication: 'login',
       
     }
