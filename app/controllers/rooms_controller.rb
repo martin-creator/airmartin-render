@@ -1,4 +1,4 @@
-class RoomController < ApplicationController
+class RoomsController < ApplicationController
   before_action :set_room, except: [:index, :new, :create]
   before_action :authenticate_user!, except: [:show]
   def index
@@ -6,11 +6,11 @@ class RoomController < ApplicationController
   end
 
   def new
-    @room = current_user.rooms.buid
+    @room = current_user.rooms.build
   end
 
   def create
-    @room = current_user.rooms.buid(rooms_params)
+    @room = current_user.rooms.build(rooms_params)
     if @room.save
       redirect_to listing_room_path(@room), notice: "Saved..."
     else

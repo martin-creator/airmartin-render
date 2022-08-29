@@ -67,5 +67,7 @@ gem 'omniauth-facebook', '~>4.0'
 
 gem 'omniauth-rails_csrf_protection'
 
+gem 'htmlbeautifier'
+
 
 
