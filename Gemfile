@@ -73,5 +73,6 @@ gem 'paperclip', '~>5.1.0'
 
 gem 'aws-sdk', '~>2.8'
 
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 

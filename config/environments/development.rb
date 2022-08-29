@@ -57,14 +57,12 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   
   config.action_mailer.smtp_settings = {
-    address: 'smtp.primetel.tech',
-    enable_starttls_auto: true,
-    port: 587,
-    domain: 'primetel.tech',
-    user_name: 'demo@primetel.tech',
-    password: "*",
-    authentication: 'login',
-    
+    :user_name => ENV["EMAIL_USERNAME"],
+    :password => ENV["EMAIL_PWD"],
+    :address => 'smtp.mailtrap.io',
+    :domain => 'smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
   }
 
 
@@ -74,8 +72,8 @@ Rails.application.configure do
     s3_host_name: 's3-us-east-2.amazonaws.com',
     s3_credentials: {
       bucket: 'airpikachu-ug',
-      access_key_id: '*',
-      secret_access_key: '*',
+      access_key_id: ENV["access_key_id"],
+      secret_access_key:  ENV["secret_access_key"],
       s3_region: 'us-east-2'
 
     }
