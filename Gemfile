@@ -69,5 +69,7 @@ gem 'omniauth-rails_csrf_protection'
 
 gem 'htmlbeautifier'
 
+gem 'paperclip', '~>5.1.0'
+
 
 
