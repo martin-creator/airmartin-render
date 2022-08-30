@@ -44,8 +44,8 @@ class RoomsController < ApplicationController
   end
 
   def update
-    new_params = room_params
-    new_params = room_params.merge(acrive: true) if is_ready_room
+    new_params = rooms_params
+    new_params = rooms_params.merge(active: true) if is_ready_room
 
     if @room.update(new_params)
       flash[:notice] = "Saved..."

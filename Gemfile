@@ -75,4 +75,6 @@ gem 'aws-sdk', '~>2.8'
 
 gem 'figaro', '~> 1.1', '>= 1.1.1'
 
+gem 'geocoder', '~>1.4'
+
 
