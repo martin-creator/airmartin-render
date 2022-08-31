@@ -69,7 +69,9 @@
                         onSelect: function(selected){
                             $('#reservation_end_date').datepicker("option", "minDate", selected);
                             $('#reservation_end_date').attr("disabled", false);
-  
+                            /*This var start_date = $('#reservation_start_date').datepicker('getDate'); belongs here 
+                            var end_date = $('#reservation_end_date').datepicker('getDate');
+                            console.log(end_date);*/
   
                         }
                     });
@@ -84,6 +86,7 @@
   
                             var start_date = $('#reservation_start_date').datepicker('getDate');
                             var end_date = $('#reservation_end_date').datepicker('getDate');
+                            //console.log(end_date);
                             var nights = (end_date - start_date)/1000/60/60/24 + 1;
   
                              var input = {
