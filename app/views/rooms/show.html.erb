@@ -108,6 +108,21 @@
       </div>
     </div>
     <hr />
+    <!---Reviews--->
+    <div class="row">
+    <div class="col-md-12">
+    <h3>
+        <%= pluralize(@guest_reviews.count, "Review")  %>
+        <span id="average_rating"></span>
+    </h3>
+    <div class="container">
+    <%= render "reviews/guest_list" %>
+    </div>
+    </div>
+    </div>
+    <br />
+    <hr />
+
 
     <!-- Google maps -->
     <div class="row">
