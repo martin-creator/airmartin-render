@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220831143615) do
+ActiveRecord::Schema.define(version: 20220831160909) do
 
   create_table "photos", force: :cascade do |t|
     t.integer  "room_id"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20220831143615) do
     t.integer  "host_id"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.string   "type"
     t.index ["guest_id"], name: "index_reviews_on_guest_id"
     t.index ["host_id"], name: "index_reviews_on_host_id"
     t.index ["reservation_id"], name: "index_reviews_on_reservation_id"
