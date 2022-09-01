@@ -79,6 +79,6 @@ gem 'geocoder', '~>1.4'
 
 gem 'jquery-ui-rails', '~>5.0'
 
-gem 'ransack', '~>1.7'
+gem 'ransack', '~>1.7' #creating our search functionality
 
 

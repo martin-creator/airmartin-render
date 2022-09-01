@@ -16,7 +16,7 @@ Location
 <div class="row">
 <div class="form-group">
 <label>Address</label>
-<%= f.text_field :address, placeholder: "What is your address?", class: "form-control", required: true %>
+<%= f.text_field :address, placeholder: "What is your address?", class: "form-control", required: true, id: "autoaddress" %>
 </div>
 </div>
 
@@ -31,3 +31,10 @@ Location
 </div>
 </div>
 </div>
+
+<script>
+$(function(){
+    $("#autoaddress").geocomplete();
+  })
+
+</script>
