@@ -3,7 +3,7 @@
     <!--Search Panel-->
     <div class="row">
       <br />
-      <div class="collapse" id="collapsePanel">
+      <div  id="collapsePanel">
         <%= search_form_for @search, url: search_path do |f| %>
           <div class="row">
             <div class="col-md-8">
@@ -63,41 +63,49 @@
           <hr />
           <div class="row">
             <div class="col-md-4">
-            <%= check_box_tag "q[is_tv_eq]", true %> TV
-            <div>
-
+              <%= check_box_tag "q[is_tv_eq]", true %> TV
+            </div>
             <div class="col-md-4">
-            <%= check_box_tag "q[is_kitchen_eq]", true %> Kitchen
-            <div>
-
+              <%= check_box_tag "q[is_kitchen_eq]", true %> Kitchen
+            </div>
             <div class="col-md-4">
-            <%= check_box_tag "q[is_internet_eq]", true %> Internet
-            <div>
-
+              <%= check_box_tag "q[is_internet_eq]", true %> Internet
+            </div>
             <div class="col-md-4">
-            <%= check_box_tag "q[is_heating_eq]", true %> Heating
-            <div>
-
+              <%= check_box_tag "q[is_heating_eq]", true %> Heating
+            </div>
             <div class="col-md-4">
-            <%= check_box_tag "q[is_air_eq]", true %> Air Conditioning
-            <div>
+              <%= check_box_tag "q[is_air_eq]", true %> Air Conditioning
+            </div>
           </div>
           <hr />
-
           <div class="row text-center">
             <%= f.submit "Search", class: "btn btn-form" %>
           </div>
-            <% end %>
-          </div>
-        </div>
+        <% end %>
       </div>
-      <div id="right">
-        <!--Google Map -->
+      <br />
+      <div class="row">
+        <% @arrRooms.each do |room|%>
+          <div class="col-md-4">
+            <div class="panel panel-default">
+              <div class="panel-heading preview">
+                <%= image_tag room.cover_photo(:medium)%>
+              </div>
+              <div class="panel-body">
+                <%= link_to room.listing_name, room %>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
-
-
-    <script>
+  </div>
+  <div id="right">
+    <!--Google Map -->
+  </div>
+</div>
+<script>
   $('#start_date').datepicker({
         dateFormat: 'dd-mm-yy',
         minDate: 0,
@@ -107,7 +115,7 @@
         $('#end_date').attr("disabled", false);
         }
   });
-
+  
    $('#end_date').datepicker({
         dateFormat: 'dd-mm-yy',
         minDate: 0,
@@ -116,5 +124,4 @@
         $('#start_date').datepicker("option", "maxDate", selected);
         }
   });
-
 </script>
