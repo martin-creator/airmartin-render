@@ -2,8 +2,15 @@
   <div id="left">
     <!--Search Panel-->
     <div class="row">
+      <div class="col-md-offset-4 col-md-4">
+        <button id="filter" class="btn btn-default" data-toggle="collapse" data-target="#collapsePanel">
+          More filters <i class="fa fa-chevron-down"></i>
+        </button>
+      </div>
+    </div>
+    <div class="row">
       <br />
-      <div  id="collapsePanel">
+      <div class="collapse" id="collapsePanel">
         <%= search_form_for @search, url: search_path do |f| %>
           <div class="row">
             <div class="col-md-8">
@@ -103,6 +110,47 @@
   </div>
   <div id="right">
     <!--Google Map -->
+
+    <div id="map" style="width : 100%; height: 100%"></div>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    
+        function initialize(){
+            var location = {lat: 0.3476 , lng: 32.5825}
+
+            <% if @arrRooms.length > 0 %>
+            location = {lat: <%= @arrRooms[0].latitude%>, lng: <%= @arrRooms[0].longitude %>}
+
+            <% end %>
+
+            var map = new google.maps. Map(document.getElementById('map'),  {
+                center: location,
+                zoom: 12
+            });
+
+            var marker, infoWindow;
+
+            <% @arrRooms.each do |room| %>
+
+                marker = new google.maps.Marker({
+                    position: {lat: <%= room.latitude%>, lng: <%= room.longitude %>},
+                    map: map
+                });
+
+                infoWindow = new google.maps.InfoWindow({
+                    content: "<div class='map_price'>$" + <%= room.price%> + "</div"
+                })
+
+                infoWindow.open(map, marker);
+
+            <% end %>
+
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+
+    </script>
   </div>
 </div>
 <script>
@@ -123,5 +171,18 @@
         onSelect: function(selected){
         $('#start_date').datepicker("option", "maxDate", selected);
         }
+  });
+  
+  var open = true;
+  
+  $('#filter').click(function(){
+    if(open){
+        console.log("I am open")
+        $('#filter').html("More filters <i class='fa fa-chevron-up'></i>");
+    }else{
+        console.log("I am closed")
+        $('#filter').html("More filters <i class='fa fa-chevron-down'></i>");
+    }
+    open = !open;
   });
 </script>
