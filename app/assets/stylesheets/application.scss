@@ -23,6 +23,11 @@ a {
   color: #00a699;
 }
 
+.text-red, .icon-red{
+  color: #ff5a5f;
+
+}
+
 //navbar
 .nav-default {
   background-color: #ffffff;
@@ -346,3 +351,17 @@ a {
   font-weight: 600;
   color: #00a699;
 }
+
+//home page
+.discovery-card{
+  background-size: cover;
+  background-position: center;
+  height: 326px;
+}
+
+.banner{
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
