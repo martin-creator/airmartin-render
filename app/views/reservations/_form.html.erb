@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <span><i class="fa fa-bolt"></i>$<%= @room.price%></span>
+    <span><% if @room.Instant? %><i class="fa fa-bolt"></i><% end %>$<%= @room.price%></span>
     <span class="pull-right" style="color: #ffb400">Per Night</span>
   </div>
   <div class="panel-body">
@@ -35,7 +35,14 @@
         </table>
       </div>
       <br />
+      <% if @room.Instant? %>
       <%= f.submit "Book Now", id: "btn_book",  class: "btn btn-normal btn-block", disabled: true %>
+
+      <% else %>
+        <%= f.submit "Request Now", id: "btn_book",  class: "btn btn-normal btn-block", disabled: true %>
+      <% end %>
+
+      
     <% end %>
   </div>
 </div>
