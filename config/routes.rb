@@ -33,5 +33,5 @@ Rails.application.routes.draw do
 
   #---- Level 2 ----
 
-  get 'dashboard' => 'dashboard#index'
+  get 'dashboard' => 'dashboards#index'
 end
