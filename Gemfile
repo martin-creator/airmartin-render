@@ -81,4 +81,4 @@ gem 'jquery-ui-rails', '~>5.0'
 
 gem 'ransack', '~>1.7' #creating our search functionality
 
-
+gem 'twilio-ruby', '~> 5.71.0' # has potential for breaking code

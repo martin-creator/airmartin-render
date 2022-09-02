@@ -7,7 +7,13 @@ Rails.application.routes.draw do
               controllers: { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    member do
+      post '/verify_phone_number' => 'users#verify_phone_number'
+      patch '/update_phone_number' => 'users#update_phone_number'
+
+    end
+  end
   resources :rooms, except: [:edit] do
     member do
       get 'listing'
