@@ -1,3 +1,4 @@
+
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -37,7 +38,7 @@ class User < ApplicationRecord
     
   end
 
-  def generate_pin:
+  def generate_pin
     self.pin = SecureRandom.hex(2)
     self.phone_verified = false
     save
@@ -45,7 +46,7 @@ class User < ApplicationRecord
 
   def send_pin
     @client = Twilio::REST::Client.new
-    @client.message.create(
+    @client.messages.create(
       from: '+19034851782',
       to: self.phone_number ,
       body: "Your pin is #{self.pin}"
