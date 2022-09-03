@@ -176,6 +176,16 @@ a {
   border: 1px solid #00a699;
 }
 
+.form-group input[type="radio"]{
+  height: 15px;
+  margin-right: 10px;
+
+}
+
+.btn-group label{
+  margin-right: 15px;
+}
+
 .form-group select {
   width: 100%;
   color: #565a5c;
