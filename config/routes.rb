@@ -52,5 +52,5 @@ Rails.application.routes.draw do
 
   get '/host_calendar' => "calendars#host"
   get '/payment_method' => "users#payment"
-  post '/add_cart' => "users#add_cart"
+  post '/add_card' => "users#add_card"
 end
