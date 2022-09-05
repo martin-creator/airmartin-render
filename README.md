@@ -24,7 +24,7 @@ How can East Africans leverage tourism to improve the lives of the less privileg
 
 AirMartin seeks to create a modern home booking web application that empowers local communities to list their properties at lower prices so tourists can find them. The UI/UX of this application is very simple for the local communities to navigate. AirMartin, we also have a mobile application that will allow users-guest&host- to have a unique experience while using the service. We understand that most of the phones in East Africa are feature phones, so we hope to create a USSD-based home booking application connected to AirMartin so that more local people who do not have access to the internet can get an opportunity to list their properties online. 
 
-To this end, it is clear that AirMartin gains pride in leading the race to increase the monthly income of   East Africans. At AirMartin, we radiate economic inclusion!  are no standards 
+To this end, it is clear that AirMartin gains pride in leading the race to increase the monthly income of   East Africans. At AirMartin, we radiate economic inclusion!  
 
 
 
