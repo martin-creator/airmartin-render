@@ -34,7 +34,7 @@ To this end, it is clear that AirMartin gains pride in leading the race to incre
 Our tech stack includes the following:
 - Ruby - version 2.5.5
 - Rails - version 5.0.3
-- Sqlite (Database)
+- Sqlite3 (Database)
 - Check the [Gemfile](./Gemfile) for other dependencies. You should be careful when changing any   gem versions as this  can break the application. 
 
 ### 2. Frontend Dependencies
