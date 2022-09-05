@@ -89,7 +89,7 @@ Ready features:
 1 - sudo apt update #update system repos
 2 - sudo apt install git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev #ruby libraries and compilers
 3- curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash # install rbenv2
-#Bash commands to update .bashrc file
+    #Bash commands to update .bashrc file
 4 - echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc
     source ~/.bashrc
@@ -140,6 +140,8 @@ To do:
 
 - This project was inspired by [Code4Startup](https://code4startup.com/)
 - Many thanks to [Leo Chan](https://hk.linkedin.com/in/leowchan) for giving me a scholarship to hone my software engineering skills. 
+- <https://www.vultr.com/docs/installing-ruby-on-rails-on-ubuntu-20-04/>
+- <https://phoenixnap.com/kb/install-ruby-ubuntu>
 
 
 ## Contact
