@@ -74,6 +74,7 @@ Ready features:
 
 
 ## Screenshots
+
 ![Imgur](https://i.imgur.com/ZCJCvGr.png)
 ![Imgur](https://i.imgur.com/sP1KzeV.png)
 ![Imgur](https://i.imgur.com/KYnMtdW.png)
@@ -117,11 +118,11 @@ This project is a template for many business models  that have booking,  review,
 
 
 ## Project Status
+
 Project is: _in progress_ 
 
 
 ## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
 - Refactoring code to follow DRY & KISS principles
@@ -130,12 +131,13 @@ Room for improvement:
 
 To do:
 - Complete stripe setup to support revenue splitting
+- Create revenue dashboard
 - Add message and notification feature for communication between host and guest
 - Build a mobile application  version of the website.
 
 
 ## Acknowledgements
-Give credit here.
+
 - This project was inspired by [Code4Startup](https://code4startup.com/)
 - Many thanks to [Leo Chan](https://hk.linkedin.com/in/leowchan) for giving me a scholarship to hone my software engineering skills. 
 
