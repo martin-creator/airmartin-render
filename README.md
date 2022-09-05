@@ -82,6 +82,32 @@ Ready features:
 
 
 ## Setup
+
+* This project is built on ruby 2.5.5 and rails 5.0.3, if you using Ubuntu, follow the steps below to install rails:
+``` 
+1 - sudo apt update #update system repos
+2 - sudo apt install git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev #ruby libraries and compilers
+3- curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash # install rbenv2
+#Bash commands to update .bashrc file
+4 - echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    source ~/.bashrc
+
+5 - rbenv -v # check rbenv version
+6 - rbenv install -l # check versions of ruby on the systme
+7 - rbenv install [version number] # install a specific ruby version
+8 - rbenv global [version number] # make installed ruby version as the global version
+9 - ruby --version # check ruby version
+10 - gem install bundler # install bundler 
+10 - gem install rails -v @version number # install rails
+11 - rails -version  # check the rails version
+12 - git clone @airmartin git repo
+13 - cd @airmartin directory
+14 - bundle # install gem dependences
+15 - rails start # start your rails application
+
+
+```
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
 Proceed to describe how to install / setup one's local environment / get started with the project.
