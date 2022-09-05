@@ -114,7 +114,7 @@ Incase you get any errors during installation, you can delete the **Gemfile.lock
 
 ## Usage
 
-This project is a template for many business models  that have booking,  review, payments, and location in the functionality.  It is therefor very possible for one to use this as a starting point to build a startup  to improve  the lives in your community and even your own life. 
+This project is a template for many business models  that have booking,  review, payments, and location in the functionality.  It is therefore very possible for anyone to use it as a starting point to build a startup  to improve   lives in your community and even your own life!
 
 
 ## Project Status
