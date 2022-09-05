@@ -108,43 +108,40 @@ Ready features:
 
 
 ```
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
-
-Proceed to describe how to install / setup one's local environment / get started with the project.
+Incase you get any errors during installation, you can delete the **Gemfile.lock** and then run **bundle** again. 
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
 
-`write-your-code-here`
+This project is a template for many business models  that have booking,  review, payments, and location in the functionality.  It is therefor very possible for one to use this as a starting point to build a startup  to improve  the lives in your community and even your own life. 
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is: _in progress_ 
 
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+- Refactoring code to follow DRY & KISS principles
+- Upgrading codebase to  newer ruby and rails  versions
+- Include documentation in ruby and html files
 
 To do:
-- Feature to be added 1
-- Feature to be added 2
+- Complete stripe setup to support revenue splitting
+- Add message and notification feature for communication between host and guest
+- Build a mobile application  version of the website.
 
 
 ## Acknowledgements
 Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- This project was inspired by [Code4Startup](https://code4startup.com/)
+- Many thanks to [Leo Chan](https://hk.linkedin.com/in/leowchan) for giving me a scholarship to hone my software engineering skills. 
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by <martinlubowa@outlook.com> - feel free to contact me!
 
 
 <!-- Optional -->
