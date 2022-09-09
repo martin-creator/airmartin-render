@@ -41,35 +41,29 @@ class UsersController < ApplicationController
     def payment
     end
 
+
     def add_card
         if current_user.stripe_id.blank?
-            customer = Stripe::Customer.create(
-                email: current_user.email, 
-                source: 'tok_visa',
-                expand: ['sources']
-                
-            )
-            current_user.stripe_id = customer.id
-            current_user.save
+          customer = Stripe::Customer.create({
+            email: current_user.email,
+            source: params[:stripeToken]
+        })
+            
+          current_user.stripe_id = customer.id
+          current_user.save
 
+          
+           # Add Credit Card to Stripe
+            Stripe::Customer.create_source(customer.id, source: params[:stripeToken])
+          #customer.sources.create(source: params[:stripeToken])
         else
-            customer = Stripe::Customer.retrieve(current_user.stripe_id)
+          customer = Stripe::Customer.retrieve(current_user.stripe_id)
+          #Stripe::Customer.update()
+          #Stripe::Source.update({params[:stripeToken]})
+          #customer.source =  {source: params[:stripeToken]} #params[:stripeToken]
+          customer.save
         end
 
-        # Add Credit Card to Stripe
-        month, year = params[:expiry].split(/ \/ /)
-        new_token = Stripe::Token.create(:card => {
-            :number => params[:number],
-            :exp_month => month,
-            :exp_year => year,
-            :cvc => params[:cvv]
-        })
-
-        #customer.sources.create({source: new_token.id})
-        customer.sources.create({
-            type: 'ach_credit_transfer',
-            source: new_token.id
-        })
 
         flash[:notice] = "Your card is saved."
         redirect_to payment_method_path
