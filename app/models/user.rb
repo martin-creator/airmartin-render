@@ -16,6 +16,8 @@ class User < ApplicationRecord
 
   has_one :setting
   after_create :add_setting
+
+  has_many :notifications
   
   def add_setting
     Setting.create(user: self, enable_sms: true, enable_email: true)  
