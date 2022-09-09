@@ -16,6 +16,9 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/message' %>
     <div class="container">
+      <% if current_user %>
+        <input type="hidden" id="user_id" value="<%= current_user.id %>">
+      <% end %>
       <%= yield %>
     </div>
   </body>

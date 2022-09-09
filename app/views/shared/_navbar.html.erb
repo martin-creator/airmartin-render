@@ -27,6 +27,12 @@
           <li><%= link_to "Login", new_user_session_path %></li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% else %>
+          <li>
+            <%= link_to notifications_path do%>
+              <i class="fa fa-bell fa-2x icon-babu"></i>
+              <span class="badge" id="navbar_num_of_unread"><%= current_user.unread if current_user.unread > 0 %></span>
+            <% end %>
+          </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %> &nbsp;
@@ -59,8 +65,8 @@
         <li <% if current_page?(rooms_path) %> class="active"<%end%> ><%= link_to "Manage Listings", rooms_path %></li>
         <li <% if current_page?(conversations_path) %> class="active"<%end%> ><%= link_to "Messages", conversations_path %></li>
         <li <% if current_page?(revenues_path) %> class="active"<%end%> ><%= link_to "Manage Your Revenue", revenues_path %></li>
-         <li <% if current_page?(host_calendar_path) %> class="active"<%end%> ><%= link_to "Host Calendar", host_calendar_path %></li>
-         <li <% if current_page?(payment_method_path) %> class="active"<%end%> ><%= link_to "Account Settings", payment_method_path %></li>
+        <li <% if current_page?(host_calendar_path) %> class="active"<%end%> ><%= link_to "Host Calendar", host_calendar_path %></li>
+        <li <% if current_page?(payment_method_path) %> class="active"<%end%> ><%= link_to "Account Settings", payment_method_path %></li>
       </ul>
     </div>
   </nav>
