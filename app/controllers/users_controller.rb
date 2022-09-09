@@ -41,6 +41,9 @@ class UsersController < ApplicationController
     def payment
     end
 
+    def payout
+    end
+
 
     def add_card
         if current_user.stripe_id.blank?
