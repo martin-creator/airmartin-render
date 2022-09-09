@@ -24,9 +24,9 @@ a {
   color: #00a699;
 }
 
-.text-red, .icon-red{
+.text-red,
+.icon-red {
   color: #ff5a5f;
-
 }
 
 //navbar
@@ -166,7 +166,6 @@ a {
   height: 4rem;
 }
 
-
 .form-group input {
   height: 45px;
   border: 1px solid #00a699;
@@ -176,13 +175,12 @@ a {
   border: 1px solid #00a699;
 }
 
-.form-group input[type="radio"]{
+.form-group input[type="radio"] {
   height: 15px;
   margin-right: 10px;
-
 }
 
-.btn-group label{
+.btn-group label {
   margin-right: 15px;
 }
 
@@ -199,7 +197,7 @@ a {
 }
 
 .select:before {
-  content: '\25bc';
+  content: "\25bc";
   font-size: 1.2em;
   position: absolute;
   color: #00a699;
@@ -218,16 +216,16 @@ a {
   border-radius: 2px;
   appearance: none;
   -moz-appearance: none; /* firefox */
-  -webkit-appearance: none;/* chrome & safari */
+  -webkit-appearance: none; /* chrome & safari */
 }
 
-.form-group input[type="checkbox"]:checked:before{
-    content: '\2713';
-    position: absolute;
-    font-size: 0.95em;
-    text-align: center;
-    width: 1.25em;
-    color:#00a699;
+.form-group input[type="checkbox"]:checked:before {
+  content: "\2713";
+  position: absolute;
+  font-size: 0.95em;
+  text-align: center;
+  width: 1.25em;
+  color: #00a699;
 }
 
 //sidebar
@@ -260,48 +258,46 @@ a {
 }
 
 // photo upload
-.btn-file{
-    position: relative;
-    overflow: hidden;
+.btn-file {
+  position: relative;
+  overflow: hidden;
 }
 
-.btn-file input[type=file]{
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
-    filter: alpha(opacity=0);
-    opacity: 0;
-    outline:  none;
-    background: white;
-    cursor: inherit;
-    display: block;
+.btn-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
 }
 
-.panel-heading.preview{
-    padding: 0;
-
+.panel-heading.preview {
+  padding: 0;
 }
 
-.panel-heading.preview img{
-    width: 100%;
-    
+.panel-heading.preview img {
+  width: 100%;
 }
 
 // room show
 
-.amenities li{
+.amenities li {
   margin-bottom: 10px;
   font-size: 16px;
   list-style-type: none;
 }
 
-.amenities .text-line-through{
+.amenities .text-line-through {
   text-decoration: line-through;
-  color: rgba(0,0,0,0.45);
+  color: rgba(0, 0, 0, 0.45);
   font-size: 14px;
 }
 
@@ -311,24 +307,22 @@ a {
   border: none;
   border-bottom: 1px solid #dce0e0;
   padding: 10px;
-
 }
 
-.reservation-table .total td{
+.reservation-table .total td {
   font-size: 16px;
   font-weight: bold;
   border: none;
-
 }
 
-.form-control.datepicker{
-  color:#00a699;
+.form-control.datepicker {
+  color: #00a699;
   background-color: white;
   border-bottom: 1px solid #00a699;
   text-align: center;
 }
 
-.message-alert{
+.message-alert {
   color: #d43242;
   font-size: 14px;
   padding-top: 10px;
@@ -336,27 +330,26 @@ a {
 
 // Search
 
-#main{
+#main {
   height: 100%;
   overflow: hidden;
 }
 
-#left{
+#left {
   padding: 10px 400px 10px 20px;
   overflow: scroll;
-  height:100%;
+  height: 100%;
 }
 
-#right{
+#right {
   position: fixed;
   top: 0;
   right: 0;
   width: 450px;
   height: 100%;
-
 }
 
-.map_price{
+.map_price {
   text-align: center;
   font-size: 16px;
   font-weight: 600;
@@ -364,54 +357,126 @@ a {
 }
 
 //home page
-.discovery-card{
+.discovery-card {
   background-size: cover;
   background-position: center;
   height: 326px;
 }
 
-.banner{
+.banner {
   margin-top: 50px;
   margin-bottom: 50px;
-
 }
 
 //calendar
-.fc-content.Waiting{
-  background-color: #C9CC60;
+.fc-content.Waiting {
+  background-color: #c9cc60;
 }
 
-.fc-past{
+.fc-past {
   background-color: lightgray;
 }
 
-.fc-day{
-  position: relative;;
+.fc-day {
+  position: relative;
 }
 
-.fc-content{
-  background-color: #00a699 ;
+.fc-content {
+  background-color: #00a699;
   height: 40px;
   border-radius: 20px;
 }
 
-
-.fc-event{
+.fc-event {
   border: 0px;
   background-color: transparent;
 }
 
-
-.fc-title{
+.fc-title {
   font-size: 14px;
   position: relative;
   top: 7px;
   left: 20px;
 }
 
-.day-price{
+.day-price {
   position: absolute;
-  color: #EAA90B;
+  color: #eaa90b;
   bottom: 2px;
   right: 2px;
+}
+
+// PAYMENT form
+
+#add-card form {
+  width: 480px;
+  margin: 20px auto;
+}
+
+#add-card label {
+  position: relative;
+  color: #6a7c94;
+  font-weight: 400;
+  height: 48px;
+  line-height: 48px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+#add-card label > span {
+  float: left;
+}
+
+.field {
+  background: white;
+  box-sizing: border-box;
+  font-weight: 400;
+  border: 1px solid #cfd7df;
+  border-radius: 24px;
+  color: #32315e;
+  outline: none;
+  height: 48px;
+  line-height: 48px;
+  padding: 15px 20px;
+  cursor: text;
+  width: 76%;
+  float: right;
+}
+
+.field::-webkit-input-placeholder {
+  color: #cfd7df;
+}
+.field::-moz-placeholder {
+  color: #cfd7df;
+}
+.field:-ms-input-placeholder {
+  color: #cfd7df;
+}
+
+.field:focus,
+.field.StripeElement--focus {
+  border-color: #f99a52;
+}
+
+.outcome {
+  float: left;
+  width: 100%;
+  padding-top: 8px;
+  min-height: 20px;
+  text-align: center;
+}
+
+.success,
+.error {
+  display: none;
+  font-size: 13px;
+}
+
+.success.visible,
+.error.visible {
+  display: inline;
+}
+
+.error {
+  color: #e4584c;
 }

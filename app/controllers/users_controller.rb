@@ -46,21 +46,19 @@ class UsersController < ApplicationController
         if current_user.stripe_id.blank?
           customer = Stripe::Customer.create({
             email: current_user.email,
-            source: params[:stripeToken]
         })
             
           current_user.stripe_id = customer.id
           current_user.save
 
-          
            # Add Credit Card to Stripe
-            Stripe::Customer.create_source(customer.id, source: params[:stripeToken])
+            Stripe::Customer.create_source(source: params[:stripeToken])
           #customer.sources.create(source: params[:stripeToken])
         else
           customer = Stripe::Customer.retrieve(current_user.stripe_id)
           #Stripe::Customer.update()
           #Stripe::Source.update({params[:stripeToken]})
-          #customer.source =  {source: params[:stripeToken]} #params[:stripeToken]
+          customer.source =  source
           customer.save
         end
 
