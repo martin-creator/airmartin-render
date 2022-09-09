@@ -65,7 +65,11 @@ class ReservationsController < ApplicationController
                 :customer => customer.id,
                 :amount => reservation.total * 100,
                 :description => room.listing_name,
-                :currency => "usd"
+                :currency => "usd",
+                :destination => {
+                    :amount => reservation.total * 80, #host keeps 80% of the money
+                    :account => room.user.merchant_id #host id created by stripe
+        }
             )
 
         if charge
