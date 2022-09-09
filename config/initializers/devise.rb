@@ -310,4 +310,5 @@ Devise.setup do |config|
   # config.sign_in_after_change_password = true
 
   config.omniauth :facebook, ENV["APP_ID"], ENV["APP_SECRET"], scope: 'email', info_fields: 'email, name'
+  config.omniauth :stripe_connect, ENV["client_id"], ENV["secret_key"], scope: 'read_write', stripe_landing: 'login'
 end
