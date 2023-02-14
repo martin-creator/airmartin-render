@@ -311,4 +311,6 @@ Devise.setup do |config|
 
   config.omniauth :facebook, ENV["APP_ID"], ENV["APP_SECRET"], scope: 'email', info_fields: 'email, name'
   config.omniauth :stripe_connect, ENV["client_id"], ENV["secret_key"], scope: 'read_write', stripe_landing: 'login'
+
+  config.secret_key = '48f0c640cd529996e5205ecfa1858adfbae41c165be7a81e9e514f7ab634ab294474756f3710b81485a989123d8d6a9c0dde65ea93fe3a1beaac60ce49c816b9'
 end
