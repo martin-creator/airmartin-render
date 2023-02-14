@@ -1,8 +1,6 @@
 databases:
   - name: airmartin
-    databaseName: neondb
-    user: martinjosephlubowa
-
+    plan: free
 services:
   - type: web
     name: airmartin
