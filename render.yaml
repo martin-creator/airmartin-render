@@ -1,6 +1,7 @@
 databases:
   - name: airmartin
     plan: free
+    postgresMajorVersion: 14
 services:
   - type: web
     name: airmartin
