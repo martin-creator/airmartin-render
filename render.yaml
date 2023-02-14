@@ -1,7 +1,6 @@
 databases:
   - name: airmartin
    ipAllowList: []
-   plan: free
 
 services:
   - type: web
