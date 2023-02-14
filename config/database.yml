@@ -46,9 +46,11 @@ test:
 
 production:
   <<: *default
-  database: airmartin
+  # database: airmartin
   # database: db/production.sqlite3
   # database: "Africalancer_production"
   # username: <%= ENV["POSTGRES_USER"] %>
-  # url: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>
+  
+
 
