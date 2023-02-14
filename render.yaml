@@ -1,7 +1,6 @@
 databases:
   - name: airmartin
-    databaseName: neondb
-    user: martinjosephlubowa
+   ipAllowList: []
 
 services:
   - type: web
@@ -16,3 +15,4 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
+    plan: free
