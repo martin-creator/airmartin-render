@@ -39,4 +39,32 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.action_mailer.default_url_options = { host: 'localhost:3000'}
+
+  config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.smtp_settings = {
+    :user_name => ENV["EMAIL_USERNAME"],
+    :password => ENV["EMAIL_PWD"],
+    :address => 'smtp.mailtrap.io',
+    :domain => 'smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
+  }
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    path: ':class/:attachment/:id/:style/:filename',
+    s3_host_name: 's3-us-east-2.amazonaws.com',
+    s3_credentials: {
+      bucket: 'airpikachu-ug',
+      access_key_id: ENV["access_key_id"],
+      secret_access_key:  ENV["secret_access_key"],
+      s3_region: 'us-east-2'
+
+    }
+
+  }
+  
+  
 end

@@ -60,6 +60,7 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
@@ -83,4 +84,33 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.action_mailer.default_url_options = { host: 'localhost:3000'}
+
+  config.action_mailer.delivery_method = :smtp
+  
+  config.action_mailer.smtp_settings = {
+    :user_name => ENV["EMAIL_USERNAME"],
+    :password => ENV["EMAIL_PWD"],
+    :address => 'smtp.mailtrap.io',
+    :domain => 'smtp.mailtrap.io',
+    :port => '2525',
+    :authentication => :cram_md5
+  }
+
+  config.paperclip_defaults = {
+    storage: :s3,
+    path: ':class/:attachment/:id/:style/:filename',
+    s3_host_name: 's3-us-east-2.amazonaws.com',
+    s3_credentials: {
+      bucket: 'airpikachu-ug',
+      access_key_id: ENV["access_key_id"],
+      secret_access_key:  ENV["secret_access_key"],
+      s3_region: 'us-east-2'
+
+    }
+
+  }
+  
+
 end
