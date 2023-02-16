@@ -1,4 +1,4 @@
-# AIRMARTIN-find East Africa's unique homes in one place
+# AIRMARTIN-find East Africa's unique homes in one place(Render)
 ![Imgur](https://i.imgur.com/YNFM9PX.jpg)
 > East Africa is endowed with many tourist attractions ranging from unique culture, wild game, and beautiful scenery. These natural endowments have attracted tourists from all over the world who have brought lots of profit to the economy, mainly through foreign exchange, but unfortunately, many locals have not been able to get a decent share of this revenue. AirMartin is a modern platform for East Africans to list their local properties at a lower cost so tourists can find a home to stay in at a cost.   
 
