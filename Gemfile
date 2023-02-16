@@ -96,4 +96,4 @@ gem 'omniauth-stripe-connect', '~>2.10.0'
 
 gem 'chartkick', '~>2.2.4'
 
-gem 'redis', '~> 4.0'
+gem 'redis', '~>3.2'

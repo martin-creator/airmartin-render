@@ -225,7 +225,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redis (4.8.1)
+    redis (3.3.5)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -321,7 +321,7 @@ DEPENDENCIES
   rails (~> 5.0.3)
   rails-assets-card!
   ransack (~> 1.7)
-  redis (~> 4.0)
+  redis (~> 3.2)
   sass-rails (~> 5.0)
   sassc-rails (>= 2.1.0)
   spring
