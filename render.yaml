@@ -1,7 +1,9 @@
 databases:
-  - name: airmartin
+  - name: airmartin_dap6
+    ipAllowList: []
     plan: free
-    postgresMajorVersion: 14
+    postgresMajorVersion: 15
+    user: airmartin
 services:
   - type: web
     name: airmartin
