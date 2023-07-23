@@ -50,7 +50,10 @@ production:
   # database: db/production.sqlite3
   # database: "Africalancer_production"
   # username: <%= ENV["POSTGRES_USER"] %>
-  url: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  # database: airmartin_dap6
+  # username: airmartin
+  # password: <%= ENV['DB_PASSWORD'] %>
   
 
 
