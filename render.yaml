@@ -1,5 +1,5 @@
 databases:
-  - name: airmartin_dap6
+  - name: airmartin_1u2x
     ipAllowList: []
     plan: free
     postgresMajorVersion: 14
@@ -14,7 +14,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: airmartin_dap6
+          name: airmartin_1u2x
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
